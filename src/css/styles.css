@@ -1,0 +1,401 @@
+/* %%%  FONTS   %%% */
+
+/* raleway-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/raleway-v29-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/raleway-v29-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/raleway-v29-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/raleway-v29-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+         url('../fonts/raleway-v29-latin-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+         url('../fonts/raleway-v29-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+  /* raleway-italic - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/raleway-v29-latin-italic.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/raleway-v29-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/raleway-v29-latin-italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/raleway-v29-latin-italic.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+         url('../fonts/raleway-v29-latin-italic.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+         url('../fonts/raleway-v29-latin-italic.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+  /* raleway-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/raleway-v29-latin-700.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/raleway-v29-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/raleway-v29-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/raleway-v29-latin-700.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+         url('../fonts/raleway-v29-latin-700.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+         url('../fonts/raleway-v29-latin-700.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+  /* raleway-700italic - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/raleway-v29-latin-700italic.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/raleway-v29-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/raleway-v29-latin-700italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/raleway-v29-latin-700italic.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+         url('../fonts/raleway-v29-latin-700italic.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+         url('../fonts/raleway-v29-latin-700italic.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+
+/* %%%  GLOBAL  %%% */
+
+:root {
+    --blau:       #1F4E8C;
+    --dunkelgrau: #3D3F45;
+    --hellgrau:   #F0F0F0;
+    --rot:        #A62C21;
+    --primaere-schriftart: Raleway;
+    --sekundaere-schriftart: "Helvetica Neue";
+    --tertiaere-schriftart: Arial;
+    --fallback-schriftart: sans-serif;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: var(--primaere-schriftart, --sekundaere-schriftart, --tertiaere-schriftart, --fallback-schriftart);
+}
+* {
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+/* %%% HEADER & FOOTER %%% */
+
+header,
+footer {
+    background: var(--hellgrau);
+    font-size: .8rem;
+    color: #000;
+    text-align: right;
+    padding-right: 3rem;
+}
+
+/* %%% NAVIGATION %%% */
+
+.nav {
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    height: 100%;
+}
+.nav img {
+    border: 1px solid var(--blau);
+}
+.nav ul {
+    list-style: none;
+    padding: 0px;
+    background-color: var(--dunkelgrau);
+}
+.nav ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.nav ul li a:link {
+    color: var(--hellgrau);
+    text-decoration: none;
+}
+.nav ul li a:visited {
+    color: var(--hellgrau);
+    text-decoration: none;
+}
+.nav ul li a:active {
+    color: var(--hellgrau);
+    text-decoration: none;
+}
+.nav ul li a:hover {
+    color: var(--hellgrau);
+    text-decoration: none;
+}
+.active {
+    background-color: var(--blau) !important;
+    color: var(--hellgrau);
+    text-decoration: none;
+}
+.inhalte {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+/* %%% STARTSEITE %%% */
+
+.flex-container {
+    display: flex;
+    width: 95%;
+    height: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.flex-container > .intro-container {
+    width: 100%;
+}
+.intro-container {
+    height: 180px;
+    padding: 50px 0;
+    background-color: var(--blau);
+}
+.intro-container h1 {
+    color: var(--hellgrau);
+}
+.intro-container p {
+    color: var(--hellgrau);
+}
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+.tile {
+    display: flex;
+    flex-basis: 22.5%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-direction: column;
+    align-items: center;
+}
+.tile h2 {
+    font-size: 1rem;
+    height: 2rem;
+    margin: 0.5rem 0 0 0;
+}
+.tile p {
+    min-height: 4rem;
+    max-height: 6rem;
+    margin: 0.5rem 0;
+}
+
+/* %%% INHALTSSEITEN %%% */
+
+.flex-container-doku {
+    display: flex;
+    width: 95%;
+    height: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.intro-container-doku {
+    min-height: 180px;
+    padding: 0rem 1rem 1rem 1rem;
+    text-align: left;
+    max-width: 95%;
+    background-color: var(--blau);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.intro-container-doku h1 {
+    color: var(--hellgrau);
+    width: 50%;
+    margin: .5rem 0;
+}
+.intro-container-doku p {
+    color: var(--hellgrau);
+    font-size: 1.1rem;
+    width: 50%;
+    padding-right: 0.5rem;
+    margin: 0;
+}
+.doku {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    text-align: left;
+}
+.doku > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 350px;
+}
+.doku-text {
+    padding: .5rem 2rem .5rem .5rem;
+    color: #000;
+    border: 2px solid var(--hellgrau);
+}
+.doku-text > ul {
+    list-style-type: square;
+}
+.doku-text > ul > li {
+    margin: .8rem 0;
+}
+.doku-text > ol > li {
+    margin: .8rem 0;
+}
+.doku-text > ol > p {
+    background-color: var(--hellgrau);
+    padding: .5rem;
+}
+.doku-img {
+    display: flex;
+    min-height: 150px;
+    padding: 2rem;
+    background-color: var(--hellgrau);
+    align-items: flex-start;
+    justify-content: center;
+}
+.doku-img img {
+    max-width: 100%;
+}
+.doku-text > p > ul {
+    background-color: var(--hellgrau);
+    list-style-type: square;
+}
+#wellenlinie {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-style: wavy;
+}
+#doppellinie {
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-decoration-style: double;
+}
+
+/* %%% TABELLEN %%% */
+
+table {
+    width: 100%;
+    align-items: center;
+}
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid var(--dunkelgrau);
+}
+thead {
+    font-weight: bold;
+    color: var(--hellgrau);
+    background-color: var(--blau);
+    border-spacing: 0;
+    height: 3rem;
+    text-align: center;
+}
+thead #td1 {
+    text-align: left;
+    padding-left: 1rem;
+}
+tbody {
+    border-collapse: collapse;
+    border: 1px solid var(--dunkelgrau);
+}
+tbody tr {
+    height: 2rem;
+    border-collapse: collapse;
+    border: 1px solid var(--dunkelgrau);
+}
+tbody .td1 {
+    text-align: left;
+    padding-left: 1rem;
+}
+tbody .td2 {
+    text-align: center;
+    padding: 1rem;
+    width: 30%;
+}
+
+/* %%% LINKLISTE %%% */
+
+.linklist {
+    font-size: .8rem;
+    color: var(--dunkelgrau);
+    margin: 1rem;
+    padding: 0 1rem .5rem 1rem;
+}
+.linklist h4 {
+    color: var(--dunkelgrau);
+}
+.linklist a {
+    text-decoration: none;
+    line-height: 1.2rem;
+}
+.linklist a:link {
+    color: var(--dunkelgrau);
+    text-decoration: none;
+}
+.linklist a:visited {
+    color: var(--dunkelgrau);
+    text-decoration: none;
+}
+.linklist a:active {
+    color: var(--rot);
+    text-decoration: none;
+}
+.linklist a:hover {
+    color: var(--blau);
+    text-decoration: none;
+}
+
+/* %%% BUTTONS %%% */
+
+.btn-anzeigen {
+    background-color: transparent;
+    border: 2px solid var(--blau);
+    font-weight: bold;
+    border-radius: 8px;
+    padding: .5rem .6rem;
+    transition: color .5s ease-in-out, border .5s ease-in-out;
+    height: 2.5rem;
+    display: inline-block;
+    width: 40%;
+    min-width: 100px;
+}
+.btn-anzeigen {
+    color: var(--blau);
+}
+.btn-anzeigen:link {
+    color: var(--blau);
+    text-decoration: none;
+}
+.btn-anzeigen:visited {
+    color: var(--blau);
+    text-decoration: none;
+}
+.btn-anzeigen:active {
+    color: var(--blau);
+    text-decoration: none;
+}
+.btn-anzeigen:hover {
+    color: var(--rot);
+    border: 2px solid var(--rot);
+}
+
+
